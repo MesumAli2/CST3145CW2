@@ -344,7 +344,7 @@ $(document).ready(function(){
 					const spc = 1
                      const attr = 'space'
                     //Put function to update the lessons with spacae count
-                    fetch(`http://localhost:3000/collection/lessons/${lesson._id}/reduce/${attr}/${spc}` , {
+                    fetch(`https://lessonsmesum.herokuapp.com/collection/lessons/${lesson._id}/reduce/${attr}/${spc}` , {
                         method: 'PUT', // set the HTTP method as 'POST'
                         headers: {
                             'Content-Type': 'application/json', // set the data type as JSON
@@ -358,7 +358,7 @@ $(document).ready(function(){
                     const newProduct = { name: lesson.topic, phonoNumber: 0500000, id: lesson.id, space: spc, image: lesson.image };
 
                     //Post func to post order to order collection   
-                   fetch('http://localhost:3000/collection/order',{
+                   fetch('https://lessonsmesum.herokuapp.com/collection/order',{
                     method: "POST", // set the HTTP method as 'POST'
                     headers: {
                         'Content-Type': 'application/json', // set the data type as JSON
@@ -380,7 +380,7 @@ $(document).ready(function(){
                  },
                  searchTable(value){
                     var data = [];
-                    fetch(`http://localhost:3000/collection/lessons/search`,{
+                    fetch(`https://lessonsmesum.herokuapp.com/collection/lessons/search`,{
                         method: 'POST',
                         headers:{
                             'Content-Type': 'application/json', // set the data type as JSON,
